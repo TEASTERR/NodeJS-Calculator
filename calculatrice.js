@@ -1,5 +1,6 @@
+// Calculatrice en CLI avec Commander (Exercice 2)
+
 const commander = require('commander')
-const { helpInformation } = require('commander')
 
 commander 
     .option('-a, --addition <number+number>', 'Additon of 2 number')
@@ -29,27 +30,34 @@ if(commander.division){
     let division = parseFloat(number[0]) / parseFloat(number[1])
     console.log(division)
 }
-// let number = process.argv[2].split('+')
-// let calcul = parseFloat(number[0]) + parseFloat(number[1])
-// console.log(calcul)
 
-// if(process.argv[2].includes('+') == true){
-//     let number = process.argv[2].split('+')
-//     let sum = parseFloat(number[0]) + parseFloat(number[1])
-//     console.log(sum)
-// }else if(process.argv[2].includes('-') == true){
-//     let number = process.argv[2].split('-')
-//     let substraction = parseFloat(number[0]) - parseFloat(number[1])
-//     console.log(substraction)
-// }else if(process.argv[2].includes('/') == true){
-//     let number = process.argv[2].split('/')
-//     let division = parseFloat(number[0]) / parseFloat(number[1])
-//     console.log(division)
-// }else if (process.argv[2].includes('*') == true){
-//     let number = process.argv[2].split('*')
-//     let multiplication = parseFloat(number[0]) * parseFloat(number[1])
-//     console.log(multiplication)
-// }else{
-//     console.log("Aucun calcul n'a été mis en parametre")
-// }
+//Calculatrice en CLI avec NodeJS "vanilla" (Exercice 2)
+let number = process.argv[2].split('+')
+let calcul = parseFloat(number[0]) + parseFloat(number[1])
+console.log(calcul)
 
+if(process.argv[2].includes('+') == true){
+    let number = process.argv[2].split('+')
+    let sum = parseFloat(number[0]) + parseFloat(number[1])
+    console.log(sum)
+}else if(process.argv[2].includes('-') == true){
+    let number = process.argv[2].split('-')
+    let substraction = parseFloat(number[0]) - parseFloat(number[1])
+    console.log(substraction)
+}else if(process.argv[2].includes('/') == true){
+    let number = process.argv[2].split('/')
+    let division = parseFloat(number[0]) / parseFloat(number[1])
+    console.log(division)
+}else if (process.argv[2].includes('*') == true){
+    let number = process.argv[2].split('*')
+    let multiplication = parseFloat(number[0]) * parseFloat(number[1])
+    console.log(multiplication)
+}else{
+    console.log("Aucun calcul n'a été mis en parametre")
+}
+
+// Addition utilisant les parametres de la commande (Exercice 1)
+
+let number = process.argv[2].split('+')
+let sum = parseFloat(number[0]) + parseFloat(number[1])
+console.log(sum)
